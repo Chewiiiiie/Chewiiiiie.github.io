@@ -41,8 +41,35 @@
 		First name: <input type="text" name="fname"><br><br>
 		<button type="Ok">Submit Form</button>
 		<button type="Why do you need this?">Reset Form</button>
+		<?php
+echo "I love $fname!"
+?>
 		
+
+<?php
+// On récupère le prénom de manière sécurisée si le formulaire est soumis
+$fname = isset($_GET['fname']) ? htmlspecialchars($_GET['fname']) : '';
+?>
+
+<form action="" method="GET"> 
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" value="<?php echo $fname; ?>"><br><br> 
+
+  <!-- Bouton d'envoi correct -->
+  <button type="submit">Submit Form</button> 
+  
+  <!-- Bouton de réinitialisation correct -->
+  <button type="reset">Reset Form</button> 
 </form>
+
+<?php 
+// Si le prénom a été saisi, on affiche le message
+if (!empty($fname)) {
+    echo "<p>I love $fname!</p>"; 
+}
+?>
+
+	
   
   <!-- Reference for representative h-card properties: https://microformats.org/wiki/h-card -->
   <main class="h-card" rel="author">
