@@ -37,6 +37,7 @@
 	
 	<p>The submit button sends the form data to the server, and the reset button clears the form field (try to type your first name and press Reset Form).</p>
 	
+	<!-- This is a comment 
 	<form action="/action_page.php">
 		First name: <input type="text" name="fname"><br><br>
 		<button type="Ok">Submit Form</button>
@@ -44,30 +45,19 @@
 		<?php
 echo "I love $fname!"
 ?>
-		
-
-<?php
-// On récupère le prénom de manière sécurisée si le formulaire est soumis
-$fname = isset($_GET['fname']) ? htmlspecialchars($_GET['fname']) : '';
-?>
-
-<form action="" method="GET"> 
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" value="<?php echo $fname; ?>"><br><br> 
-
-  <!-- Bouton d'envoi correct -->
-  <button type="submit">Submit Form</button> 
-  
-  <!-- Bouton de réinitialisation correct -->
-  <button type="reset">Reset Form</button> 
-</form>
-
-<?php 
-// Si le prénom a été saisi, on affiche le message
-if (!empty($fname)) {
-    echo "<p>I love $fname!</p>"; 
+	
+-->
+<script>
+function customReset()
+{
+    document.getElementById("name").value = "";
+    document.getElementById("country").value = "";
 }
-?>
+</script>
+
+
+
+<input type="button" name="reset" value="Reset" id="reset123" onclick="customReset();"/>
 
 	
   
