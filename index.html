@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-deeptranslate-injected="true">
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-  <!-- To use social readers via microsub, follow these steps.
-    (Details: https://indieweb.org/Microsub#Getting_Started)
-    1. After publishing this to your domain, sign in to https://aperture.p3k.io/login with your domain
-    2. You will see a <link> tag displayed on your dashboard that looks like:
-      <link rel="microsub" href="https://aperture.p3k.io/microsub/000">
-    3. Copy that <link> tag and paste it after this HTML comment.
-    4. Publish the updated page!
-   -->
+	
+<meta charset="UTF-8">
+<meta name="description" content="a room, a scrapbook, a laboratory...">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
   <title> Are you lost? </title>
   <style>
     @media (prefers-color-scheme: dark) {
-      html { background-color: #111111; color: #fbfbfb; }
+      html { background-color: #CDB88E; color: #66532F; }
       a { color: #ca8465; }
     }
     body {
@@ -74,13 +66,7 @@
 </html>
 
 
-<html lang="en" data-deeptranslate-injected="true"><head>
-	<meta charset="UTF-8">
-  
-	<title>ribo.zone</title>
 
-	<meta name="description" content="a room, a scrapbook, a laboratory...">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="style.css" rel="stylesheet" type="text/css" media="all">
 	<link rel="alternate" type="application/rss+xml" title="ribo.zone" href="feed.xml">
@@ -372,3 +358,204 @@
   
 </body><div data-deeptranslate-ui="hover" hidden="" style="position: fixed; z-index: 2147483500; max-width: 360px; max-height: 220px; overflow: auto; padding: 10px 12px; border-radius: 10px; background: rgb(23, 32, 51); color: white; font: 13px / 1.5 system-ui; box-shadow: rgba(19, 41, 77, 0.333) 0px 8px 28px; white-space: pre-wrap;"></div><div id="deeptranslate-word-selection" data-deeptranslate-ui="word-selection"></div><div data-deeptranslate-ui="floating-button" style="height: 122px; top: 119px;"></div><div hidden="" data-deeptranslate-ui="mobile-popup"></div></html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-deeptranslate-injected="true"><head>
+    <title>sketchbook</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="some drawings">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+ 	* { box-sizing: border-box; }
+	body { background: url('../img/bg/flower.png'); min-height: 100vh; color: black;}
+	section {
+		border: 0.8vw solid black;
+		background-color: white;
+		border-radius: 2vw;
+		width: 65vw;
+		height: 40vw;
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 0 0.2vw;
+	}
+	section#start { 
+		display: flex;
+		z-index: 1;
+	}
+	section:target {
+		display: flex;
+		z-index: 2;
+	}
+	.pageL,	.pageR {
+		height: 100%;
+		width:50%;
+		display: inline-block;
+		position: relative;
+		border-radius: 1.5vw;
+		font-size: 32px;
+	}
+	.pageL { border-left: 0.1vw grey solid; }
+	.pageR { border-right: 0.1vw grey solid; }
+	a.pageL:hover::after, a.pageL:focus::after {
+		content: '←';
+		color: black;
+		position: absolute;
+		bottom: 1vw;
+		left: 1.2vw;
+	}
+	a.pageR:hover::after, a.pageR:focus::after {
+		content: '→';
+		color: black;
+		position: absolute;
+		bottom: 1vw;
+		right: 1.2vw;
+	}
+	.mid { width: 1%; background: linear-gradient(to right, white, grey, white); }
+	img, h1, p { max-width: 90%; max-height: 90%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%); 
+		image-rendering: auto;
+		filter: none;
+	}
+	h1 { text-align: center; top: 40%; }
+	section a:hover, section a:focus { background-color: transparent; }
+	.home {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		z-index: 3
+	}
+	.home a { color: teal; background-color: white; }
+	.home a:hover, .home a:focus { color: white; background-color: teal; }
+	
+	@media screen and (max-width: 1000px){
+		section {
+			width: 97.5vw;
+			height: 67.5vw;
+		}
+	}
+	
+	@media screen and (max-width: 600px){
+		main { 
+			display: flex;
+			width: 100%;
+			height: 100vh;
+			overflow-x: scroll;
+			overflow-y: hidden;
+		}
+		section {
+			width: 200vw;
+			height: fit-content;
+			align-content: center;
+			display:flex;
+			border: none;
+			border-radius: 0;
+			outline:none;
+			border-top: 3px outset lightgrey;
+			border-bottom: 3px outset lightgrey;
+		}
+		.mid { display: none; }
+		section { 	
+			position: static;
+			transform: translate(0,0);
+			margin: auto;
+		}
+		.pageL,	.pageR {
+			width: 100vw;
+			height: 60vh;
+			min-height: 98vw;
+			padding: 40px 0;
+			display: inline-block;
+			border-left: none;
+			border-right: none;
+		}
+		img { max-width: 100%; padding: 2vw; }
+		h1 { top: 50%; }
+		h1::after {
+			content: '-->';
+			display: block;
+			margin: 40px;
+			font-size: 40px;
+		}
+	}
+	
+	@media (prefers-color-scheme: dark) {
+		body { background: url('../img/bg/spring.png'); }
+	}
+  </style>
+<style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="use-credentials"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa"></head>
+<body>
+
+<nav class="home"><a href="../">return home</a></nav>
+
+<main>
+
+<section id="start">
+	<div class="pageL">
+		<h1>selected sketches</h1>
+	</div>
+	<div class="mid"></div>
+	<a class="pageR" href="#01">
+		<img src="plant.png" alt="an irrigation system made of pvc pipes, with an variety of small plants growing in it. the pipes are drawn in thin pen with careful, straight lines, while the plants are more loose and abstract, drawn with a thick green marker.">
+	</a>
+</section>
+
+<section id="01">
+	<a class="pageL" href="#start">
+		<img src="lichen.png" alt="two drawings, one showing each side of a piece of tree bark. the top is covered in lichen and moss, and i've tried to emphasize the texture. some of the lichen is pillowy and other parts are fuzzy. squiggly. the bottom of the bark is mostly unremarkable save for two very tiny creatures. i'm not sure if the larger one is a caterpillar or an isopod, but the tiny one is most likely a mite.">
+	</a>
+	<div class="mid"></div>
+	<a class="pageR" href="#02">
+		<img src="miscellany.png" alt="pencil sketches of unrelated subjects scattered on the page, none given too much detail. the planet saturn, a chocobo (which is a fictional bird species from the final fantasy games), a cell nucleus and endoplasmic reticulum, a funguar (which is a mushroom-shaped monster, again from final fantasy), and an amoeba.">
+	</a>
+</section>
+
+<section id="02">
+	<a class="pageL" href="#01">
+		<img src="butterflyclover.png" alt="a small butterfly perched atop a clover flower; a study from a reference photo. the lines are in thin black pen, with grey alcohol marker used for shading.">
+	</a>
+	<div class="mid"></div>
+	<a class="pageR" href="#03">
+		<img src="stamps.png" alt="pen drawings of american postage stamps: 1 cent apple stamp (but the apples look more like onions), non-machinable butterfly stamp, 5 cent 'stop traffic accidents' stamp, 3 cent ballot stamp, 20 cent cactur wren stamp, lemon forever stamp, and 32 cent california condor stamp. there's an ink blotch on the condor.">
+	</a>
+</section>
+
+<section id="03">
+	<a class="pageL" href="#02">
+		<img src="pikmin.png" alt="some watercolor sketches. the largest is a yellow pikmin, winking and giving a thumbs up. another is a bee on a pink coneflower. the smallest is three pikmin running through tall grass.">
+	</a>
+	<div class="mid"></div>
+	<div class="pageR">
+		<img src="sun.png" alt="an attempt to capture the feeling at sunset. the sky and water are filled in with sketchy pencil marks, while the sun and it's reflection are the only parts of the page left light. there are a few boats on the water, barely visible, and trees on the horizon.">
+	</div>
+</section>
+
+</main>
+
+
+
+
+</body><div data-deeptranslate-ui="hover" hidden="" style="position: fixed; z-index: 2147483500; max-width: 360px; max-height: 220px; overflow: auto; padding: 10px 12px; border-radius: 10px; background: rgb(23, 32, 51); color: white; font: 13px / 1.5 system-ui; box-shadow: rgba(19, 41, 77, 0.333) 0px 8px 28px; white-space: pre-wrap;"></div><div id="deeptranslate-word-selection" data-deeptranslate-ui="word-selection"></div><div data-deeptranslate-ui="floating-button" style="height: 122px; top: 119px;"></div><div hidden="" data-deeptranslate-ui="mobile-popup"></div></html>
