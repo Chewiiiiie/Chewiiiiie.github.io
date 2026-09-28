@@ -72,3 +72,303 @@
 </body>
 
 </html>
+
+
+<html lang="en" data-deeptranslate-injected="true"><head>
+	<meta charset="UTF-8">
+  
+	<title>ribo.zone</title>
+
+	<meta name="description" content="a room, a scrapbook, a laboratory...">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="style.css" rel="stylesheet" type="text/css" media="all">
+	<link rel="alternate" type="application/rss+xml" title="ribo.zone" href="feed.xml">
+	<link rel="me" href="https://github.com/ribozone"> <!-- for indielogin -->
+	
+	<!-- webchain -->
+	<link rel="webchain" href="https://webchain.milkmedicine.net">
+	<link rel="webchain-nomination" href="https://sixey.es/">
+	<link rel="webchain-nomination" href="https://solflo.neocities.org/">
+	<link rel="webchain-nomination" href="https://sweetfish.site/">
+	
+	<style>	
+		body {
+			overflow-x: hidden;
+			background: url('photos/img/bg.png') white;
+		}
+		.room {
+			position: relative;
+			aspect-ratio: 16 / 9;
+			margin: 0 auto;
+			max-height: calc(95dvh - 6rem);
+			max-width: 95%;
+		}
+		.room img { width: 100%; }
+		.room span {
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: calc(0.8rem + 1.25vw);
+			color: #FFF;
+			line-height: 0.9;
+			filter: drop-shadow(1px 1px 0 #233)
+				drop-shadow(-1px 1px 0 #233) 
+				drop-shadow(1px -1px 0 #233) 
+				drop-shadow(-1px -1px 0 #233);
+			text-transform: uppercase;
+			z-index: 99;
+		}
+		.rotate, .appear {
+			width: fit-content;
+			height: fit-content;
+			display: inline-block;
+			position: absolute;
+			color: transparent; background:transparent;
+		}
+		.rotate:hover, .rotate:focus, .appear:hover, .appear:focus {
+			color: transparent; background:transparent;
+		}
+		.rotate:hover img, .rotate:focus-visible img {
+			transform: rotate(3deg);
+		}
+		.rotate:hover span, .rotate:focus-visible span, a:focus span {
+			opacity: 1;
+		}
+		.appear img {
+			opacity: 0;
+		}
+		.appear:hover img, .appear:hover span, a:focus img {
+			opacity: 1;
+		}
+		header {
+			width: fit-content;
+			padding: 10px;
+			margin: 10px auto -1rem auto;
+			text-wrap: balance;
+			position: relative;
+			z-index: 100;
+			font-size: 18px;
+			text-align: right;
+		}
+		h1 { font-size: 26px; line-height: 26px; margin: 0; text-align:left; }
+		button { background: transparent; border: none; }
+		#news { 
+			background: transparent;
+			border: none;
+			margin: calc(100px + 4vh) auto 1rem auto;
+			max-width: 620px;
+		}
+		#news > div { 
+			background: white;
+			margin: 10px;
+			box-shadow: 5px 5px rgb(0,0,0,0.4);
+			border-radius: 0 0 5px 5px;
+			padding: 5px;
+		}
+		#news h2 { text-align: center; letter-spacing: 2px; font-size: 3.25rem; margin: 15px 10px 10px 10px; }
+		#news h3 { text-align: center; font-style: normal; text-transform: uppercase; font-size: 1.1em; text-wrap: balance; }
+		#news h3, #news p { margin: 10px 0; }
+		#news time { display: block; border-style: solid; border-width: 1px 0; padding: 7px 0 5px 0; text-align: center; margin: 10px; font-size: 1em; }
+		#news p, #news li { text-align: justify; font-size: 0.9em; }
+		#news > div > p { text-align: center; margin: 10px; border-top: 1px solid; padding-top: 10px; }
+		#news ul { margin: 10px 0; }
+		#news button { color: teal; text-decoration: underline dotted; text-underline-offset: 2px; padding: 2px 1px 0 1px; line-height: 1.2; }
+		#news button:hover, #news button:focus { outline: 1px dotted; outline-offset: 1px; }
+		#news button, #news > div > p > a { display: block; margin: auto; font-size: 1rem; }
+		#news > div > p > a:nth-child(2) { order: 1; }
+		#news > div > p:last-child { display: flex; justify-content: space-around; }
+		.flex { display: flex; flex-wrap: wrap; margin: 10px 0; }
+		.flex div { flex: 1 1 30%; padding: 0 10px; }
+		.flex div:not(:last-child) { border-right: 1px solid; }
+
+		@media (max-width: 900px) {
+			.room span { font-size: calc(0.5em + 1.75vw); }
+			header { margin: 10px auto 0; }
+		}		
+		@media (max-width: 600px) {
+			.flex div { flex: 1 1 100%; }
+			.flex div:not(:last-child) { border-right: 0; }
+		}
+		@media (max-height: 400px) {
+			.room { max-height: unset; }
+		}
+		
+		@media (prefers-color-scheme: dark) {
+			body { background: #1d3030 url('microscopy/bg.png'); }
+			header, h1 { color: white; }
+			#news button { color: #b2d7c1; }
+			#news > div { background: darkslategrey; }
+			.room img, .room > div:not(#news), button img { filter:brightness(0.9); }
+		}
+
+	</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="use-credentials"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa"><style>undefined</style></head>
+  <body>
+	<header>
+		<h1>You find yourself in a laboratory...</h1>
+		Will you dig through the drawers, or take the <a href="map">sitemap</a>?
+	</header>
+	<main class="room">
+
+	<a href="links" class="rotate" style="top: 7.778%; left: 0%; width: 19.5%;">
+		<img src="img/home/window.png" alt="">
+		<span style="top: 30%;">
+		Links</span>
+	</a>
+	
+	<div style="background: url(img/home/desk.png);
+		position: absolute; background-size: 100%;
+		top: 52.779%; left: 15.625%;
+		width: 61.188%; height: 54%;">
+	</div>
+	
+	<div style="background: url(img/home/shelf.png);
+		position: absolute; background-size: 100%;
+		top: 10.667%; left: 75.813%;
+		width: 24.750%; height: 92.778%;">
+	</div>
+	
+	<a href="info" class="rotate" style="top: 30.556%; left: 53.438%; width: 17.938%;">
+		<img src="img/home/pc.png" alt="">
+		<span style="top: 28%;">Info</span>
+	</a>
+	
+	<img src="img/home/stand.png" style="position: absolute;
+	top: 45.534%; left: 6.525%; width: 12.907%;" alt="">
+
+	<a href="contact" class="rotate" style="top: 32.512%; left: 12.375%; width: 11.98%; z-index: 2;">
+		<img src="img/home/pigeon.png" alt="">
+		<span>Contact</span>
+	</a>
+	
+	<a href="sunday/" class="rotate" style="top: 7.223%; left: 29.688%; width: 9.375%;">
+		<img src="img/home/clock.png" alt="">
+		<span>Events</span>
+	</a>
+	
+	<a href="bugs/" class="rotate" style="top: 7.778%; left: 48.438%; width: 13.938%;">
+		<img src="img/home/bug.png" alt="">
+		<span>Bugs</span>
+	</a>
+	
+	<a href="historyofsci/" class="rotate" style="top: 27.022%; left: 21.4%; width: 21.688%;">
+		<img src="img/home/chem.png" alt="">
+		<span>Science History</span>
+	</a>
+	
+	<a href="blog/" class="appear" style="top: 76.889%; left: 17.5%; width: 15.736%">
+		<img src="img/home/drawerL2.png" alt="">
+		<span style="left:47.5%;">
+		Blog</span>
+	</a>
+	
+	<button popovertarget="news" class="rotate" style="top: 56.356%; left: 36%; width: 11%;
+		filter: drop-shadow(0 0.1vw 0 rgb(0,0,0,0.5))">
+		<img src="img/home/newspaper.png" alt="">
+		<span>News</span>
+	</button>
+	
+	<a href="microscopy/" class="rotate" style="top: 35.822%; left: 46%; width: 6.875%">
+		<img src="img/home/microscope.png" alt="">
+		<span>Microscopy</span>
+	</a>
+
+	<a href="sticky/note" class="rotate" style="top: 48.334%; left: 65.938%; width:3.688%;">
+		<img src="img/home/postit.png" alt="">
+		<span>Sticky</span>
+	</a>
+	
+	<a href="free/" class="appear" style="top: 76.533%; left: 58.9%; width: 16.3%">
+		<img src="img/home/drawerR2.png" alt="">
+		<span>
+		Webcraft Supplies</span>
+	</a>
+	
+	<a href="plants/" class="rotate" style="top: -0.556%; left: 71.125%; width: 15.625%">
+		<img src="img/home/pothos.png" alt="">
+		<span style="top: 35%;">
+		Plants</span>
+	</a>
+
+	<div style="background: url(img/home/pride.png);
+		position: absolute; background-size: 100%;
+		top: 4.533%; left: 85%;
+		width: 5.750%; height: 6.889%;">
+	</div>
+
+	<a href="mecha/" class="rotate" style="top: 17.223%; left: 86%; width: 9.750%;">
+		<img src="img/home/gunpla.png" alt="">
+		<span>Mecha</span>
+	</a>
+
+	<a href="games/" class="rotate" style="top: 39.378%; left: 78.35%; width: 11.5625%;">
+		<img src="img/home/psx.png" alt="">
+		<span>Games</span>
+	</a>
+	
+	<a href="recs" class="rotate" style="top: 34.444%; left: 89.35%; width: 8.500%;">
+		<img src="img/home/books1.png" alt="">
+		<span>Media Recs</span>
+	</a>
+	
+	<a href="https://drawingsformusic.org" class="rotate" style="top: 52.779%; left: 79.875%; width: 16.625%;">
+		<img src="img/home/stereo.png" alt="">
+		<span style="width: 110%">Drawings for Music</span>
+	</a>
+
+	<a href="sketchbook/" class="rotate" style="top: 72%; left: 79%; width: 9.0625%">
+		<img src="img/home/sketchbook.png" alt="">
+		<span style="top:40%;">
+		Sketch</span>
+	</a>
+
+	<a href="photos/" class="rotate" style="top: 68.889%; left: 87.5%; width: 9.625%">
+		<img src="img/home/cam.png" alt="">
+		<span>Photos</span>
+	</a>
+
+	<a href="clay/" class="rotate" style="top: 82.667%; left: 80.75%; width: 8.646%;">
+		<img src="img/home/claypillar.png" alt="">
+		<span>Clay Beasts</span>
+	</a>
+
+	
+	<a href="virtualworlds/" class="rotate" style="top: 81.244%; left: 92%; width: 4.2%;">
+		<img src="img/home/aetheryte.png" alt="">
+		<span>Virtual Worlds</span>
+	</a>
+
+	<div popover="" id="news">
+		<div>
+			<h2>ribonews</h2>
+			<time>september 13, 2026</time>
+			<div class="flex">
+				<div>
+					<h3>personal update!</h3>
+					<p>i defended my thesis! yay! i should probably write a post about it. i'm entering a new era.</p>
+				</div>
+				<div>
+				<h3>site updates</h3>
+					<p>new layout for the webcrafting supplies section, w/ 2 new pages: <a href="free/graphics/backgrounds">backgrounds</a> &amp; <a href="free/guides/fonts">fonts</a>.</p>
+				</div>
+				<div>
+					<h3>upcoming events</h3>
+					<ul>
+						<li><a href="https://itch.io/jam/digital-pet-jam">digital pet jam</a>
+						</li><li><a href="https://weirdweboctober.website/">weird web october</a>
+						</li><li><a href="https://itch.io/jam/bitsy-100">#bitsyjam 100</a>
+					</li></ul>
+				</div>
+
+			</div>
+			<p><a href="feed.xml">RSS feed</a> <a href="changelog">changelog</a> <button popovertarget="news" popovertargetaction="hide">close</button></p>
+		</div>
+	</div>
+
+	</main>
+  
+</body><div data-deeptranslate-ui="hover" hidden="" style="position: fixed; z-index: 2147483500; max-width: 360px; max-height: 220px; overflow: auto; padding: 10px 12px; border-radius: 10px; background: rgb(23, 32, 51); color: white; font: 13px / 1.5 system-ui; box-shadow: rgba(19, 41, 77, 0.333) 0px 8px 28px; white-space: pre-wrap;"></div><div id="deeptranslate-word-selection" data-deeptranslate-ui="word-selection"></div><div data-deeptranslate-ui="floating-button" style="height: 122px; top: 119px;"></div><div hidden="" data-deeptranslate-ui="mobile-popup"></div></html>
+
