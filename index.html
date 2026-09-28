@@ -28,14 +28,16 @@
   </style>
 
 <script type="text/javascript">
-     function ExampleJS(){
+     function ExampleJS(event){
+		 event.preventDefault(); 
         var jFirst = document.getElementById("fname").value;
-        println("Hi and welcome " + jFirst + "! Nice to meet you. I hope you didn't write an insult there!);
+        document.getElementById("resultat").innerText = "Hi and welcome " + jFirst + "! Nice to meet you. I hope you didn't write an insult there!";
      }
      </script>
 	 
 </head>
 
+	
 <body>
 
   <h1>Where am I?</h1>
@@ -45,16 +47,17 @@
 	
 	<p>The submit button sends the form data to the server, and the reset button clears the form field (try to type your first name and press Reset Form).</p>
 
-<FORM NAME="myform" onSubmit="JavaScript:ExampleJS()">
-
-             First name: <input type="text" id="fname" name="firstname" /><br />
-             Last name:  <input type="text" id="lname" name="lastname" /><br />
-            <input name="Submit"  type="submit" value="Let's start!" />
-        </FORM>
+<form name="myform" onSubmit="ExampleJS(event)">
+         What's your name?: <input type="text" id="fname" name="firstname" /><br />
+         <input name="Submit" type="submit" value="Let's start!" />
+    </form>
 		
+    <div id="resultat" style="margin-top: 20px; font-weight: bold; color: green;"></div>
         
     </body>
+	
 </html>
+
 
 
 
