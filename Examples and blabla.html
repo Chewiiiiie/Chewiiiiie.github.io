@@ -30,19 +30,18 @@
 
 <body>
 
-  <h1>Where am I?</h1>
-  <p>Are you also lost?</p>
+
+<h1>The area media attribute</h1>
+
+<p>Click on the sun to watch it closer:</p>
+
+<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm" media="screen and (min-color-index:256)">
+</map>
 	
-	<h2>HTML Button Types</h2>
-	
-	<p>The submit button sends the form data to the server, and the reset button clears the form field (try to type your first name and press Reset Form).</p>
-	
-	<form action="/action_page.php">
-		First name: <input type="text" name="fname"><br><br>
-		<button type="Ok">Submit Form</button>
-		<button type="Why do you need this?">Reset Form</button>
-		
-</form>
+ 
   
   <!-- Reference for representative h-card properties: https://microformats.org/wiki/h-card -->
   <main class="h-card" rel="author">
