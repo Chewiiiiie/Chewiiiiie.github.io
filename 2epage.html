@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-deeptranslate-injected="true">
+<head>
+	
+<meta charset="UTF-8">
+<meta name="description" content="I still don't know what exactly">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  <title> Are you FOUND? </title>
+	<style>
+    @media (prefers-color-scheme: dark) {
+      a { color: #ca8465; }
+    }
+    body {
+	  background-image: url('../823fd7d1601752e171a61d36144b74ec.jpg');
+		background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+      line-height: 1.6;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      text-align: center;
+      margin: 1rem auto;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img.u-photo { border-radius: 50%; }
+    ul { padding: 0; list-style: none; }
+  </style>
 
+<script type="text/javascript">
+     function ExampleJS(event){
+		 event.preventDefault(); 
+        var jFirst = document.getElementById("fname").value;
+        document.getElementById("resultat").innerText = "wHAT ARE YOU DOING " + jFirst + "! Nice to meet you. I hope you didn't write an insult there! Et si c Lounys cc jtm";
+     }
+     </script>
+	 
+</head>
+
+	
+<body>
+
+
+  <h1>Where am I?</h1>
+  <p>Are you also lost?</p>
+
+<form name="myform" onSubmit="ExampleJS(event)">
+         What's your name?: <input type="text" id="fname" name="firstname" /><br />
+         <input name="Submit" type="submit" value="Let's start!" />
+    </form>
+		
+    <div id="resultat" style="margin-top: 20px; font-weight: bold; color: rgb(0, 0, 255);"></div>
+        
+    </body>
+	
+</html>
