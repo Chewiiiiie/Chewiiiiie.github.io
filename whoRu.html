@@ -93,34 +93,23 @@
   <button type="button" onclick="this.closest('dialog').close()">Close</button>
 </dialog>
 
-
-
-	 
-<dialog id="dialog-cat">
-  <h2>The Distinguished Cat</h2>
-  <p>You clicked on that cat waw</p>
+<dialog id="dialog-slot">
+  <h2>The Slutty Slot</h2>
+  <p>You clicked on that slot waw</p>
   <button type="button" onclick="this.closest('dialog').close()">Close</button>
 </dialog>
 
-<dialog id="dialog-dog">
-  <h2>The Adventurous Dog</h2>
-  <p>You clicked on that dog waw</p>
+<dialog id="dialog-cloud">
+  <h2>The Generous cloud</h2>
+  <p>You clicked on that cloud waw</p>
   <button type="button" onclick="this.closest('dialog').close()">Close</button>
 </dialog>
 
-<dialog id="dialog-fish">
-  <h2>The Smart fish</h2>
+<dialog id="dialog-birds">
+  <h2>The Funny Birds</h2>
   <p>You clicked on that fish waw</p>
   <button type="button" onclick="this.closest('dialog').close()">Close</button>
 </dialog>
-
-
-
-
-
-
-
-
 	 
 <script>
   document.getElementById('trigger-cat').addEventListener('click', (e) => {
@@ -134,37 +123,23 @@
   document.getElementById('trigger-fish').addEventListener('click', (e) => {
     e.preventDefault();
     document.getElementById('dialog-fish').showModal();
-  });
-
-
-
-
-
-
-
-
-
-
-
-
-	
-document.getElementById('trigger-cat').addEventListener('click', (e) => {
+  });	
+document.getElementById('trigger-slot').addEventListener('click', (e) => {
     e.preventDefault();
-    document.getElementById('dialog-cat').showModal();
+    document.getElementById('dialog-slot').showModal();
   });
-  document.getElementById('trigger-dog').addEventListener('click', (e) => {
+  document.getElementById('trigger-cloud').addEventListener('click', (e) => {
     e.preventDefault();
-    document.getElementById('dialog-dog').showModal();
+    document.getElementById('dialog-cloud').showModal();
   });
-  document.getElementById('trigger-fish').addEventListener('click', (e) => {
+  document.getElementById('trigger-birds').addEventListener('click', (e) => {
     e.preventDefault();
-    document.getElementById('dialog-fish').showModal();
+    document.getElementById('dialog-birds').showModal();
   });
 </script>
 
 
-	 
-	
+		
     </body>
 	
 </html>
