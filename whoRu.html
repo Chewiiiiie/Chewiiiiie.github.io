@@ -33,6 +33,56 @@
   opacity: 1;
 }
 
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(8px);  
+}
+
+dialog {
+  border: none;                         
+  border-radius: 16px;                  
+  padding: 32px;                       
+  max-width: 450px;                     
+  width: 90%;                           
+  background-color: #ffffff;            
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25); 
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+}
+
+dialog h2 {
+  margin-top: 1;                        
+  color: #1a1a1a;
+  font-size: 1.65rem;
+  border-bottom: 2px solid #f0f0f0; 
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+dialog p {
+  line-height: 1.6;                     
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 24px;
+}
+
+dialog button {
+  background-color: #222222;            
+  color: #ffffff;                      
+  border: none;
+  border-radius: 8px;                 
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;                     
+  width: 100%;       
+}
+
+dialog button:hover {
+  background-color: #444444;        
+}
+
 	
 </style>	
 
