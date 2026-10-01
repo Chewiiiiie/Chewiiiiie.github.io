@@ -62,8 +62,44 @@
   	</a>
 	
 </div>
-  
 
+<dialog id="dialog-cat">
+  <h2>The Distinguished Cat</h2>
+  <p>You clicked on that cat waw</p>
+  <button onclick="document.getElementById('dialog-chat').close()">Close</button>
+</dialog>
+
+<dialog id="dialog-dog">
+  <h2>The Adventurous Dog</h2>
+  <p>You clicked on that dog waw</p>
+  <button onclick="document.getElementById('dialog-chien').close()">Close</button>
+</dialog>
+
+<dialog id="dialog-poisson">
+  <h2>The Smart fish</h2>
+  <p>You clicked on that fish waw</p>
+  <button onclick="document.getElementById('dialog-poisson').close()">Close</button>
+</dialog>
+	 
+
+
+<script>
+  document.getElementById('trigger-chat').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('dialog-chat').showModal();
+  });
+  document.getElementById('trigger-chien').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('dialog-chien').showModal();
+  });
+  document.getElementById('trigger-poisson').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('dialog-poisson').showModal();
+  });
+</script>
+
+
+	 
 	
     </body>
 	
