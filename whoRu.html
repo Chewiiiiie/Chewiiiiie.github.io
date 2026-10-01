@@ -61,6 +61,18 @@
     	<img src="smartfish.png" alt="Smart fish">
   	</a>
 	
+	<a href="" id="trigger-slot" class="appear" style="left: 1px; top: 5px; width: 481px; height: 307px;">
+		<img src="sluttyslot.png" alt="Slutty Slot">
+	</a>
+	
+	<a href="" id="trigger-cloud" class="appear" style="left: 750px; top: 3px; width: 804px; height: 805px;">
+   		<img src="generouscloud.png" alt="Generous Cloud">
+  	</a>
+
+	 <a href="#" id="trigger-birds" class="appear" style="left: 1814px; top: 16px; width: 542px; height: 300px;">
+    	<img src="funnybirds.png" alt="Funny Birds">
+  	</a>
+	
 </div>
 
 <dialog id="dialog-cat">
@@ -80,11 +92,63 @@
   <p>You clicked on that fish waw</p>
   <button type="button" onclick="this.closest('dialog').close()">Close</button>
 </dialog>
-	 
-	 
 
+
+
+	 
+<dialog id="dialog-cat">
+  <h2>The Distinguished Cat</h2>
+  <p>You clicked on that cat waw</p>
+  <button type="button" onclick="this.closest('dialog').close()">Close</button>
+</dialog>
+
+<dialog id="dialog-dog">
+  <h2>The Adventurous Dog</h2>
+  <p>You clicked on that dog waw</p>
+  <button type="button" onclick="this.closest('dialog').close()">Close</button>
+</dialog>
+
+<dialog id="dialog-fish">
+  <h2>The Smart fish</h2>
+  <p>You clicked on that fish waw</p>
+  <button type="button" onclick="this.closest('dialog').close()">Close</button>
+</dialog>
+
+
+
+
+
+
+
+
+	 
 <script>
   document.getElementById('trigger-cat').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('dialog-cat').showModal();
+  });
+  document.getElementById('trigger-dog').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('dialog-dog').showModal();
+  });
+  document.getElementById('trigger-fish').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('dialog-fish').showModal();
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+	
+document.getElementById('trigger-cat').addEventListener('click', (e) => {
     e.preventDefault();
     document.getElementById('dialog-cat').showModal();
   });
