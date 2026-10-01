@@ -54,6 +54,21 @@
 	</a>
 
 
+<wa-drawer label="Drawer" placement="bottom" class="drawer-placement-bottom">
+  This drawer slides in from the bottom.
+  <wa-button slot="footer" variant="brand" data-drawer="close">Close</wa-button>
+</wa-drawer>
+
+<wa-button appearance="filled">Open from Bottom</wa-button>
+
+<script>
+  const drawer = document.querySelector('.drawer-placement-bottom');
+  const openButton = drawer.nextElementSibling;
+
+  openButton.addEventListener('click', () => (drawer.open = true));
+</script>
+
+	
 	
   </div>
 
