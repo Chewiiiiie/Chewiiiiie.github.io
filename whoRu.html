@@ -36,20 +36,7 @@
 	
 </style>	
 
-<script>
-  const drawer = document.querySelector('.drawer-placement-bottom');
-  const openButton = document.querySelector('.open-btn');
-  const imageLink = document.querySelector('.trigger-drawer');
 
-  const openDrawer = (event) => {
-    event.preventDefault();
-    drawer.open = true;
-  };
-	
-  openButton.addEventListener('click', openDrawer);
-  imageLink.addEventListener('click', openDrawer);
-	
-</script>
 	
 	
 </head>
@@ -75,13 +62,22 @@
 </wa-drawer>
 
 <wa-button appearance="filled">Open from Bottom</wa-button>
+</div>
 
 
+  <script>
+    const drawer = document.querySelector('.drawer-placement-bottom');
+    const openButton = document.querySelector('.open-btn');
+    const imageLink = document.querySelector('.trigger-drawer');
 
-	
-	
-  </div>
-
+    const openDrawer = (event) => {
+      event.preventDefault();
+      drawer.open = true;
+    };
+      
+    openButton.addEventListener('click', openDrawer);
+    imageLink.addEventListener('click', openDrawer);
+  </script>
 
 
 	
