@@ -36,8 +36,6 @@
 	
 </style>	
 
-
-	
 	
 </head>
 
@@ -51,34 +49,20 @@
 <div class="map-container">
 <img src="whoRu.png" alt="allanimals" usemap="#animalmap">
 
-	<a href="" class="appear trigger-drawer" style="left: 1086px; top: 822px; width: 511px; height: 402px;">
+	<a href="" id="trigger-cat" class="appear" style="left: 1086px; top: 822px; width: 511px; height: 402px;">
 		<img src="distinguishedcat.png" alt="Distinguished Cat">
 	</a>
 
+	<a href="" id="trigger-dog" class="appear" style="left: 1930px; top: 747px; width: 420px; height: 482px;">
+   		<img src="adventurousdog.png" alt="Adventurous dog">
+  	</a>
 
-<wa-drawer label="Drawer" placement="bottom" class="drawer-placement-bottom">
-  This drawer slides in from the bottom.
-  <wa-button slot="footer" variant="brand" data-drawer="close">Close</wa-button>
-</wa-drawer>
-
-<wa-button appearance="filled">Open from Bottom</wa-button>
+	 <a href="#" id="trigger-fish" class="appear" style="left: 43px; top: 1088px; width: 377px; height: 118px;">
+    	<img src="smartfish.png" alt="Smart fish">
+  	</a>
+	
 </div>
-
-
-  <script>
-    const drawer = document.querySelector('.drawer-placement-bottom');
-    const openButton = document.querySelector('.open-btn');
-    const imageLink = document.querySelector('.trigger-drawer');
-
-    const openDrawer = (event) => {
-      event.preventDefault();
-      drawer.open = true;
-    };
-      
-    openButton.addEventListener('click', openDrawer);
-    imageLink.addEventListener('click', openDrawer);
-  </script>
-
+  
 
 	
     </body>
