@@ -49,8 +49,8 @@
 <div class="map-container">
 <img src="whoRu.png" alt="allanimals" usemap="#animalmap">
 
-	<a href="" class="appear" style="left: 1086px; top: 822px; width: 511px; height: 402px;">
-		<img src="distinguishedcat.png" onClick='alert("Hello World!")' alt="">
+	<a href="" class="appear trigger-drawer" style="left: 1086px; top: 822px; width: 511px; height: 402px;">
+		<img src="distinguishedcat.png" alt="Distinguished Cat">
 	</a>
 
 
@@ -63,9 +63,17 @@
 
 <script>
   const drawer = document.querySelector('.drawer-placement-bottom');
-  const openButton = drawer.nextElementSibling;
+  const openButton = document.querySelector('.open-btn');
+  const imageLink = document.querySelector('.trigger-drawer');
 
-  openButton.addEventListener('click', () => (drawer.open = true));
+  const openDrawer = (event) => {
+    event.preventDefault();
+    drawer.open = true;
+  };
+	
+  openButton.addEventListener('click', openDrawer);
+  imageLink.addEventListener('click', openDrawer);
+	
 </script>
 
 	
