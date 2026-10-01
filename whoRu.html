@@ -34,11 +34,12 @@
 }
 
 dialog::backdrop {
-  background-color: rgba(238, 234, 225, 0.8); 
-  backdrop-filter: blur(25px);  
+  backdrop-filter: blur(35px);  
 }
 
 dialog {
+  position: relative;               
+  overflow: visible; 
   border: none;                         
   padding: 32px;                       
   max-width: 2000px;                     
@@ -66,23 +67,31 @@ dialog p {
   margin-bottom: 24px;
 }
 
-dialog button {
-  background-color: rgba(156, 138, 96, 0.8);            
-  color: rgba(0, 0, 0, 0.8);
-  max-width: 500px;
-  border: none;
-  border-radius: 8px;                 
-  padding: 10px 20px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;                     
-  width: 100%;       
-}
+.dialog__close {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;            
+    background-color: rgba(156, 138, 96, 1);            
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;                     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    }
 
-dialog button:hover {
-  background-color: rgba(255, 179, 0, 0.8);        
-}
-
+.dialog__close:hover {
+    background-color: rgba(255, 179, 0, 1);
+    transform: translate(50%, -50%) scale(1.1);
+    }
 	
 </style>	
 
@@ -128,37 +137,37 @@ dialog button:hover {
 <dialog id="dialog-cat">
   <h2>The Distinguished Cat</h2>
   <p>You clicked on that cat waw</p>
-  <button type="button" onclick="this.closest('dialog').close()">Close</button>
+  <button class="dialog__close" type="button" onclick="this.closest('dialog').close()">&times;</button>
 </dialog>
 
 <dialog id="dialog-dog">
   <h2>The Adventurous Dog</h2>
   <p>You clicked on that dog waw</p>
-  <button type="button" onclick="this.closest('dialog').close()">Close</button>
+  <button class="dialog__close" type="button" onclick="this.closest('dialog').close()">&times;</button>
 </dialog>
 
 <dialog id="dialog-fish">
   <h2>The Smart fish</h2>
   <p>You clicked on that fish waw</p>
-  <button type="button" onclick="this.closest('dialog').close()">Close</button>
+  <button class="dialog__close" type="button" onclick="this.closest('dialog').close()">&times;</button>
 </dialog>
 
 <dialog id="dialog-slot">
   <h2>The Slutty Slot</h2>
   <p>You clicked on that slot waw</p>
-  <button type="button" onclick="this.closest('dialog').close()">Close</button>
+  <button class="dialog__close" type="button" onclick="this.closest('dialog').close()">&times;</button>
 </dialog>
 
 <dialog id="dialog-cloud">
   <h2>The Generous cloud</h2>
   <p>You clicked on that cloud waw</p>
-  <button type="button" onclick="this.closest('dialog').close()">Close</button>
+  <button class="dialog__close" type="button" onclick="this.closest('dialog').close()">&times;</button>
 </dialog>
 
 <dialog id="dialog-birds">
   <h2>The Funny Birds</h2>
   <p>You clicked on these birds waw</p>
-  <button type="button" onclick="this.closest('dialog').close()">Close</button>
+  <button class="dialog__close" type="button" onclick="this.closest('dialog').close()">&times;</button>
 </dialog>
 	 
 <script>
