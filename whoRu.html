@@ -57,7 +57,7 @@
    		<img src="adventurousdog.png" alt="Adventurous dog">
   	</a>
 
-	 <a href="#" id="trigger-fish" class="appear" style="left: 43px; top: 1088px; width: 385px; height: 120px;">
+	 <a href="" id="trigger-fish" class="appear" style="left: 43px; top: 1088px; width: 395px; height: 126px;">
     	<img src="smartfish.png" alt="Smart fish">
   	</a>
 	
@@ -69,7 +69,7 @@
    		<img src="generouscloud.png" alt="Generous Cloud">
   	</a>
 
-	 <a href="#" id="trigger-birds" class="appear" style="left: 1814px; top: 16px; width: 542px; height: 300px;">
+	 <a href="" id="trigger-birds" class="appear" style="left: 1814px; top: 16px; width: 542px; height: 300px;">
     	<img src="funnybirds.png" alt="Funny Birds">
   	</a>
 	
@@ -107,7 +107,7 @@
 
 <dialog id="dialog-birds">
   <h2>The Funny Birds</h2>
-  <p>You clicked on that fish waw</p>
+  <p>You clicked on these birds waw</p>
   <button type="button" onclick="this.closest('dialog').close()">Close</button>
 </dialog>
 	 
@@ -123,8 +123,8 @@
   document.getElementById('trigger-fish').addEventListener('click', (e) => {
     e.preventDefault();
     document.getElementById('dialog-fish').showModal();
-  });	
-document.getElementById('trigger-slot').addEventListener('click', (e) => {
+  });
+  document.getElementById('trigger-slot').addEventListener('click', (e) => {
     e.preventDefault();
     document.getElementById('dialog-slot').showModal();
   });
