@@ -10,6 +10,18 @@
   display: inline-block;
 }
 
+.image-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: countain;
+}
+	
 .appear {
   position: absolute;
   left: fit-content;
@@ -105,9 +117,12 @@ dialog p {
 
 <p>Click on the animal you identifiy with (only the distinguished cat is working):</p>
 
-<div class="map-container">
-<img src="whoRu.png" alt="allanimals" usemap="#animalmap">
 
+<div class="image-container">
+  <img src="whoRu.png" alt="allanimals" width="2560" height="1392"> 
+</div>
+
+	
 	<a href="" id="trigger-cat" class="appear" style="left: 1086px; top: 822px; width: 511px; height: 402px;">
 		<img src="distinguishedcat.png" alt="Distinguished Cat">
 	</a>
