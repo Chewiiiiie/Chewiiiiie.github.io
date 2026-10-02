@@ -116,12 +116,12 @@ dialog p {
    		<img src="adventurousdog.png" alt="Adventurous dog">
   	</a>
 
-	 <a href="" id="trigger-fish" class="appear" style="left: 39px; top: 1088px; width: 395px; height: 128px;">
+	 <a href="" id="trigger-fish" class="appear" style="left: 35px; top: 1088px; width: 395px; height: 128px;">
     	<img src="smartfish.png" alt="Smart fish">
   	</a>
 	
-	<a href="" id="trigger-slot" class="appear" style="left: 1px; top: 5px; width: 481px; height: 307px;">
-		<img src="sluttyslot.png" alt="Slutty Slot">
+	<a href="" id="trigger-sloth" class="appear" style="left: 1px; top: 5px; width: 481px; height: 307px;">
+		<img src="sluttyslot.png" alt="Slutty Sloth">
 	</a>
 	
 	<a href="" id="trigger-cloud" class="appear" style="left: 750px; top: 3px; width: 804px; height: 805px;">
@@ -153,8 +153,8 @@ dialog p {
 </dialog>
 
 <dialog id="dialog-slot">
-  <h2>The Slutty Slot</h2>
-  <p>You clicked on that slot waw</p>
+  <h2>The Slutty Sloth</h2>
+  <p>You clicked on that sloth AND NOT THE SLOT SORRY I CANT WRITE IN ENGLISH APPARENTLY?????? waw</p>
   <button class="dialog__close" type="button" onclick="this.closest('dialog').close()">&times;</button>
 </dialog>
 
@@ -183,9 +183,9 @@ dialog p {
     e.preventDefault();
     document.getElementById('dialog-fish').showModal();
   });
-  document.getElementById('trigger-slot').addEventListener('click', (e) => {
+  document.getElementById('trigger-sloth').addEventListener('click', (e) => {
     e.preventDefault();
-    document.getElementById('dialog-slot').showModal();
+    document.getElementById('dialog-sloth').showModal();
   });
   document.getElementById('trigger-cloud').addEventListener('click', (e) => {
     e.preventDefault();
